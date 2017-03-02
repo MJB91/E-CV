@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <title>Jennifer Brandao - Marie Jane Brando / E-CV  </title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="assets/css/janestyle.css" rel="stylesheet" type="text/css" />
     <link type="text/css" rel="stylesheet" href="assets/materialize/css/materialize.css"/>
 
@@ -14,46 +14,71 @@
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script type="text/javascript" src="js/materialize.min.js"></script>
     <!--responsive menu-->
-    <input type="checkbox" id="nav-checkbox" class="dropdown" />
+    <input type="checkbox" id="nav-checkbox" />
     <label for="nav-checkbox" id="nav-label"></label>
-    <summary id="main-nav">
-      <div class="collection">
-        <a id="#!"href="#index.html">.Main</a>
-        <a id="#!"href="#portfolio.html">.Gallery</a>
-        <a id="#!"href="#lifestyle.html">.Lifestyle</a>
-        <a id="#!"href="#skills.html">.Skills</a>
-        <a id="#!"href="#contact.html">.GetInTouch</a>
+    <summary id="main-nav" class="container">
+      <div class="summary">
+        <ul>
+          <li>
+            <a id=""href="./index.html">.Main</a></li>
+          <li>
+            <a id=""href="./portfolio.html">.Gallery</a></li>
+          <li>
+            <a id=""href="./lifestyle.html">.Lifestyle</a></li>
+          <li>
+            <a id=""href="./skills.html">.Skills</a></li>
+          <li>
+            <a id=""href="./contact.html">.GetInTouch</a></li>
+        </ul>
       </div>
     </summary>
-    <header id="banner">
-
-      <div class="row">
-      <form class="col s12">
-      <div class="row">
-        <div class="input-field col s6"><br/>
-          <input placeholder="Your Name" id="first_name" type="text" class="validate">
-          <label for="first_name">First Name</label>
-      </div>
-       <div class="input-field col s6"><br/>
-        <input id="last_name" type="text" class="validate">
-        <label for="last_name">Last Name</label>
-       </div>
-      </div>
-      <div class="row">
-        <div class="input-field col s12"><br/>
-          <input id="email" type="email" class="validate">
-          <label for="email">Email</label>
-        </div>
-      </div>
-      <div class="row">
-       <div class="input-field col s12"><br/>
-        <textarea id="textarea1" class="materialize-textarea"></textarea>
-        <label for="textarea1">Textarea</label>
-       </div>
-      </div>
-
+    <header class="valign-wrapper" id="banner">
+      <h1>Get In Touch</h1>
+      <small>Send me your best words...</small>
     </header>
     <main>
+      <div class="container contact">
+        <h5>I'll call you ASAP !</h5>
+        <hr>
+        <div class="row">
+          <div class="col s12 m6 l6">
+            <div class="row">
+              <form class="col s12">
+                <div class="row">
+                  <div class="input-field col s6">
+                    <input id="first_name" type="text" class="validate">
+                    <label for="first_name">First Name</label>
+
+                  </div>
+                  <div class="input-field col s6">
+                    <input id="last_name" type="text" class="validate">
+                    <label for="last_name">Last Name</label>
+
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="input-field col s12">
+                    <input id="email" type="email" class="validate">
+                    <label for="email">E-Mail</label>
+
+                  </div>
+                </div>
+                <textarea class="materialize-textarea" placeholder="Your Message" required></textarea>
+                <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+                  <i class="mdi-content-send right"></i>
+                </button>
+              </form>
+            </div>
+          </div>
+          <div class="col s12 m6 l6 contact-holder right-align">
+            <br>
+            <p>Jennifer Brandao</p>
+            <p>contact.subsession@gmail.com</p>
+            <p>+33680133000</p>
+            <p>dumusc.wordpress.com</p>
+          </div>
+        </div>
+      </div>
     </main>
     <footer id="bottom">Marie Jane Brando for _blank school, 2016-2017</footer>
   </body>
