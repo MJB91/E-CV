@@ -1,29 +1,30 @@
 /*__________________________ PROPS FIRST (width, color, style, etc) */
 
 html,body {
-  margin: 0px;
-  font-family: "Helvetica Neue", sans-serif;
   text-decoration: none;
   color: black;
-
 }
 
-a , li{
-  list-style: none;
-  text-decoration: none;
-  padding-bottom: 55px;
-  padding-top: 55px;
-  padding-right: 26%;
-  margin-left: -3%;
-  margin-top: -18px;
-  text-align: center;
-  font-size: 30px;
+ul, li, a {
+  width: 100%;
+  margin-top: 15px;
+  padding-top: 21px;
+  color: white;
+  display: block;
+}
+
+li {
+  border-bottom: solid white 1px;
+}
+li:hover {
+  border-bottom: solid black 1px;
 }
 
 a:hover {
   list-style: none;
-  text-transform: uppercase;
-
+  color: black;
+  font-size: 20px;
+  transition-duration: 0.5s;
 }
 
 #bottom {
@@ -43,15 +44,16 @@ a:hover {
 }
 
 #nav-label {
-  color: black;
+  color:white;
   position:fixed;
-  top:1;
-  right:0;
+  top:0;
+  left:0;
   z-index: 2;
 }
 
 #nav-label::before {
   content:"OPEN";
+
 }
 
 #nav-checkbox:checked + label::before {
@@ -62,74 +64,58 @@ a:hover {
 #main-nav {
   position:fixed;
   background-color: transparent;
-  right:-100%;
+  right: 100%;
   height:100%;
-  width:100%;
-
+  width: 25%;
+  transition: right 0.3s;
 }
 
 #nav-checkbox:checked ~ #main-nav {
-  left: 850px;
+  right: 70%;
 }
-
-/*Definir pictos et nuancier de couleurs du menu */
-#cell1{
-  background-color: #000;
+@media (max-width: 600px){
+  #main-nav {
+    display: flex;
+    background-color: transparent;
+    margin-top: 30px;
+    right:100%;
+    height:100%;
+    width:100%;
+    transition: right 0.3s;
+ }
 }
-#cell1:hover{
-  background-color: #111;
-  transition-duration: right, 0,5s;
-}
-#cell2{
-  background-color: #222;
-}
-#cell2:hover{
-  background-color: #333;
-  transition-duration: right, 0,5s;
-}
-#cell3{
-  background-color: #444;
-}
-#cell3:hover{
-  background-color: #555;
-  transition-duration: right, 0,5s;
-}
-#cell4{
-  background-color: #666;
-}
-#cell4:hover{
-  background-color: #777;
-  transition-duration: right, 0,5s;
-}
-#cell5{
-  background-color: #888;
-}
-#cell5:hover{
-  background-color: #999;
-  transition-duration: right, 0,5s;
-}
-
-
 
 /* Banner background */
 
-#banner {
+.valign-center,#banner {
   background-image:url('../img/jane-nanterre-reversed.jpg');
   width:100%;
   height: 97vh;
   background-size: cover;
-  text-align:center;
-  display:flex;
+  display: flex;
   justify-content: center;
   flex-direction:column;
 }
 
 #banner > h1 {
   color: white;
-
-  text-transform: full-width;
   font-size:3em;
   margin:0px;
+}
+
+@media (max-width: 600px){
+  .valign-center,#banner {
+    background-image:url('../img/jane-nanterre-reversed.jpg');
+    width:100%;
+    height: 97vh;
+    background-size: cover;
+    display: block;
+    justify-content: flex-start;
+    text-align: center;
+    flex-direction:column;
+    animation-direction: reverse;
+
+  }
 }
 
 /* END BANNER */
